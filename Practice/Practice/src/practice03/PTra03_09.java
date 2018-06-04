@@ -6,6 +6,7 @@ package practice03;
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 
+
 public class PTra03_09 {
 	public static void main(String[] args) {
 		/*
@@ -18,5 +19,55 @@ public class PTra03_09 {
 		 *
 		 * ※ プログラムは何行書いても良いです
 		 */
+
+		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		int num = scanner.nextInt();
+		String week;
+
+//		if(num == 0) {
+//			week = "日曜";
+//		} else if(num == 1) {
+//			week = "月曜";
+//		} else if(num == 2) {
+//			week = "火曜";
+//		} else if(num == 3) {
+//			week = "水曜";
+//		} else if(num == 4) {
+//			week = "木曜";
+//		} else if(num == 5) {
+//			week = "金曜";
+//		} else if(num == 6) {
+//			week = "土曜";
+//		} else {
+//			week = "0～6の整数を入力してください";
+//		}
+
+		switch(num) {
+		case 0:
+			week = "日曜";
+			break;
+		case 1:
+			week = "月曜";
+			break;
+		case 2:
+			week = "火曜";
+			break;
+		case 3:
+			week = "水曜";
+			break;
+		case 4:
+			week = "木曜";
+			break;
+		case 5:
+			week = "金曜";
+			break;
+		case 6:
+			week = "土曜";
+			break;
+		default:
+			week = "0～6の整数を入力してください";
+		}
+
+		System.out.println(week);
 	}
 }

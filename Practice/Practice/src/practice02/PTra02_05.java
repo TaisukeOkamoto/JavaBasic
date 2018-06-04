@@ -12,5 +12,6 @@ public class PTra02_05 {
 		String name = "山田";
 
 		// ★ 変数age, nameを連結して「山田さんは、58歳です」と出力してください
+		System.out.println(name + "さんは、" + age + "歳です");
 	}
 }

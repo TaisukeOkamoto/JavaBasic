@@ -13,19 +13,19 @@ public class PTra05_03 {
 		java.util.Scanner scanner = new java.util.Scanner(System.in);
 
 		// ★ int型の変数indexを宣言して、0で初期化してください
-
+		int index = 0;
 
 		// ★ int型の変数mountainを宣言して、0で初期化してください
-
+		int mountain = 0;
 
 		// ★ int型の変数riverを宣言して、0で初期化してください
-
+		int river = 0;
 
 		// ★ int型の変数oceanを宣言して、0で初期化してください
-
+		int ocean = 0;
 
 		// ★ 変数indexが5未満である間繰り返す条件式を記述してください
-		while () {
+		while (index < 5) {
 
 			System.out.println((index + 1) + "人目");
 			System.out.println("山、川、海でどこに行きたいか入力してください。");
@@ -41,14 +41,29 @@ public class PTra05_03 {
 			 * ●変数lineが"海"であった場合		->	変数oceanに1加算
 			 * ●変数lineが上記以外であった場合	->	「無効票です」を出力
 			 */
-
+			switch(line) {
+			case "山":
+				mountain++;
+				break;
+			case "川":
+				river++;
+				break;
+			case "海":
+				ocean++;
+				break;
+			default:
+				System.out.println("無効票です");
+			}
 
 
 			// ★ 変数indexに1を足して、変数indexに代入してください
+			index++;
 
 		}
 
 		// ★ 変数mountain、river、oceanの票数をそれぞれ出力してください
-
+		System.out.println("山："+ mountain);
+		System.out.println("川："+ river);
+		System.out.println("海："+ ocean);
 	}
 }

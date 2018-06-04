@@ -35,6 +35,15 @@ public class PTra03_08 {
 		 *
 		 * ※ プログラムは何行書いても良いです
 		 */
+		if(num == 1) {
+			num = 150;
+		} else if(num == 2) {
+			num = 160;
+		} else if(num == 3) {
+			num = 200;
+		}
+		money = (int)(money - Math.floor(num*1.08));
+		System.out.println(money);
 
 	}
 }
