@@ -39,18 +39,23 @@ public class PTra18_02 {
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
 		 */
 		ArrayList<Player> player = new ArrayList<Player>();
+		int i = 0;
+		//リストの番号を初期化
 		try {
 			Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"));
 			while(scanner.hasNextLine()) {
 				String line = scanner.nextLine();
 				String[] lineString = line.split(",");
-				for(int i =0;i < lineString.length;i++) {
-					player[i] = new Player();
-					player[i].setPosition(lineString[0]);
-					player[i].setName(lineString[1]);
-					player[i].setCountry(lineString[2]);
-					player[i].setTeam(lineString[3]);
-				}
+				//リストの一行を配列に変換
+					player.add(new Player());
+					// playerインスタンス生成
+					player.get(i).setPosition(lineString[0]);
+					player.get(i).setName(lineString[1]);
+					player.get(i).setCountry(lineString[2]);
+					player.get(i).setTeam(lineString[3]);
+					//i番目のplayerにそれぞれ情報を格納
+					i++;
+					//次回繰り返し時、iに1を足す。
  			}
 		} catch (FileNotFoundException e) {
 			// TODO 自動生成された catch ブロック
@@ -60,6 +65,9 @@ public class PTra18_02 {
 
 		// ★ ArrayListに格納されているインスタンス全てのtoStringメソッドを実行し、出力してください
 		// ※ できれば拡張for文を使いましょう
+		for(Player p :player) {
+			System.out.println(p.toString());
+		}
 
 	}
 }
